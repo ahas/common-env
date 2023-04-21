@@ -71,6 +71,7 @@ install_nodejs() {
 install_git() {
 	$INSTALL git
 	git config --global core.editor /usr/bin/nvim
+	git config credential.helper store
 }
 
 set_os
