@@ -68,6 +68,11 @@ install_nodejs() {
 	sudo npm install -g npm
 }
 
+install_git() {
+	$INSTALL git
+	git config --global core.editor /usr/bin/nvim
+}
+
 set_os
 set_install_command
 install_zsh
@@ -75,3 +80,4 @@ install_ohmyzsh
 install_utils
 install_neovim
 install_nodejs
+install_git
