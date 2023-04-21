@@ -41,6 +41,7 @@ install_ohmyzsh() {
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	curl -o ~/.zshrc https://raw.githubusercontent.com/ahas/common-env/main/.zshrc
 }
 
 install_utils() {
@@ -66,6 +67,11 @@ install_nodejs() {
 	sudo npm install -g npm
 }
 
+install_python() {
+	$INSTALL python3
+	$INSTALL python3-pip
+}
+
 install_git() {
 	$INSTALL git
 	git config --global core.editor /usr/bin/nvim
@@ -79,4 +85,5 @@ install_ohmyzsh
 install_utils
 install_neovim
 install_nodejs
+install_python
 install_git
