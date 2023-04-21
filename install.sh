@@ -55,10 +55,8 @@ install_neovim() {
 	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 				 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	# my init.vim
-	rm -rf /tmp/ahas-init-vim
-	git clone https://github.com/ahas/init.vim /tmp/ahas-init-vim
-	mkdir ~/.config/nvim/
-	cp /tmp/ahas-init-vim/init.vim ~/.config/nvim/init.vim
+	mkdir ~/.config/nvim
+	curl -o ~/.config/nvim/init.vim https://raw.githubusercontent.com/ahas/init.vim/main/init.vim
 }
 
 install_nodejs() {
