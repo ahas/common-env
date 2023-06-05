@@ -36,3 +36,5 @@ function fzfv() {
 # ripgrep
 alias grep="rg"
 
+# etc
+alias sudo='sudo '

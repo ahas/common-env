@@ -76,15 +76,14 @@ install_python() {
 install_git() {
 	$INSTALL git
 	git config --global core.editor /usr/bin/nvim
-	git config credential.helper store
 }
 
 set_os
 set_install_command
-install_zsh
-install_ohmyzsh
 install_utils
 install_neovim
 install_nodejs
 install_python
 install_git
+install_zsh
+install_ohmyzsh
