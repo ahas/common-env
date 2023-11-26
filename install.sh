@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set_os() {
 	if [ -f /etc/os-release ]; then
